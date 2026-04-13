@@ -13,6 +13,7 @@ const config: Config = {
 
   url: 'https://timsunid.github.io',
   baseUrl: '/developer-playbook/',
+  trailingSlash: false,
 
   organizationName: 'timsunID',
   projectName: 'developer-playbook',
@@ -102,7 +103,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Developer Playbook. Built with Docusaurus.`,
+      copyright: `Copyright ï¿½ ${new Date().getFullYear()} Developer Playbook. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
