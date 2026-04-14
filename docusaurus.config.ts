@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Developer Playbook',
   tagline: 'Repeatable setup processes for machines, projects, and workflows.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   future: {
     v4: true,
@@ -47,6 +47,10 @@ const config: Config = {
     },
     navbar: {
       title: 'Developer Playbook',
+      logo: {
+        alt: 'Developer Playbook logo',
+        src: 'img/favicon.svg',
+      },
       items: [
         {
           type: 'docSidebar',
@@ -56,54 +60,11 @@ const config: Config = {
         },
         {
           href: 'https://github.com/timsunID/developer-playbook',
-          label: 'GitHub',
+          'aria-label': 'GitHub repository',
+          className: 'navbar-github-link',
           position: 'right',
         },
       ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Playbook',
-          items: [
-            {
-              label: 'Introduction',
-              to: '/docs/intro',
-            },
-            {
-              label: 'Machine Setup',
-              to: '/docs/machine-setup',
-            },
-            {
-              label: 'Project Setup',
-              to: '/docs/project-setup',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Workflows',
-              to: '/docs/workflows',
-            },
-            {
-              label: 'Standards',
-              to: '/docs/standards',
-            },
-            {
-              label: 'Troubleshooting',
-              to: '/docs/troubleshooting',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/timsunID/developer-playbook',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright � ${new Date().getFullYear()} Developer Playbook. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

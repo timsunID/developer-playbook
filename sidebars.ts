@@ -60,6 +60,24 @@ const sidebars: SidebarsConfig = {
       label: 'Templates',
       items: ['templates/templates', 'templates/process-template'],
     },
+    {
+      type: 'category',
+      label: 'Code Snippets',
+      items: [
+        'snippets/snippets',
+        {
+          type: 'category',
+          label: 'React',
+          items: ['snippets/react/react-snippets', 'snippets/react/navbar-component'],
+        },
+        {
+          type: 'category',
+          label: 'Rust',
+          items: ['snippets/rust/rust-snippets'],
+        },
+        'snippets/war-chest',
+      ],
+    },
   ],
 };
 

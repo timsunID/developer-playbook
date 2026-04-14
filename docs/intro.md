@@ -14,6 +14,7 @@ This site is my personal playbook for repeatable development setup and project w
 - Working standards
 - Troubleshooting runbooks
 - Reusable templates
+- Reusable code snippets
 
 ## How to use this site
 
@@ -30,3 +31,4 @@ This site is my personal playbook for repeatable development setup and project w
 - [Standards](./standards/README.md)
 - [Troubleshooting](./troubleshooting/README.md)
 - [Templates](./templates/README.md)
+- [Code Snippets](./snippets/README.md)

@@ -5,24 +5,162 @@
  */
 
 :root {
-  --ifm-color-primary: #2563eb;
-  --ifm-color-primary-dark: #1d4ed8;
-  --ifm-color-primary-darker: #1e40af;
-  --ifm-color-primary-darkest: #1e3a8a;
-  --ifm-color-primary-light: #3b82f6;
-  --ifm-color-primary-lighter: #60a5fa;
-  --ifm-color-primary-lightest: #93c5fd;
+  --ifm-color-primary: #5ca886;
+  --ifm-color-primary-dark: #4f9676;
+  --ifm-color-primary-darker: #468a6c;
+  --ifm-color-primary-darkest: #3a7159;
+  --ifm-color-primary-light: #78ba9b;
+  --ifm-color-primary-lighter: #94cbb1;
+  --ifm-color-primary-lightest: #c7e7d7;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(2, 6, 23, 0.08);
+  --playbook-code-bg: #f8fafc;
+  --playbook-code-title-bg: #eef2ff;
+  --playbook-code-title-text: #1e293b;
+  --playbook-code-border: rgba(15, 23, 42, 0.14);
+  --playbook-code-copy-bg: #ffffff;
+  --playbook-code-copy-border: rgba(15, 23, 42, 0.18);
+  --playbook-code-copy-text: #0f172a;
+  --playbook-code-shadow: 0 14px 28px -22px rgba(15, 23, 42, 0.45);
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #60a5fa;
-  --ifm-color-primary-dark: #3b82f6;
-  --ifm-color-primary-darker: #2563eb;
-  --ifm-color-primary-darkest: #1d4ed8;
-  --ifm-color-primary-light: #93c5fd;
-  --ifm-color-primary-lighter: #bfdbfe;
-  --ifm-color-primary-lightest: #dbeafe;
+  --ifm-color-primary: #8ed3b0;
+  --ifm-color-primary-dark: #79c7a0;
+  --ifm-color-primary-darker: #66bc92;
+  --ifm-color-primary-darkest: #4ea378;
+  --ifm-color-primary-light: #a5debf;
+  --ifm-color-primary-lighter: #bde8cf;
+  --ifm-color-primary-lightest: #d8f2e3;
   --docusaurus-highlighted-code-line-bg: rgba(148, 163, 184, 0.2);
+  --playbook-code-bg: #0b1220;
+  --playbook-code-title-bg: #070d18;
+  --playbook-code-title-text: #cbd5e1;
+  --playbook-code-border: rgba(148, 163, 184, 0.26);
+  --playbook-code-copy-bg: rgba(15, 23, 42, 0.7);
+  --playbook-code-copy-border: rgba(148, 163, 184, 0.42);
+  --playbook-code-copy-text: #e2e8f0;
+  --playbook-code-shadow: 0 16px 28px -18px rgba(2, 6, 23, 0.8);
+}
+
+.navbar__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.24rem 0.85rem 0.24rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 22%, transparent);
+  background: color-mix(in srgb, var(--ifm-color-primary) 12%, transparent);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.navbar__brand:hover {
+  background: color-mix(in srgb, var(--ifm-color-primary) 18%, transparent);
+  border-color: color-mix(in srgb, var(--ifm-color-primary) 32%, transparent);
+}
+
+.navbar__logo {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0;
+}
+
+.navbar__logo img {
+  width: 1.45rem;
+  height: 1.45rem;
+  display: block;
+  border-radius: 8px;
+}
+
+.navbar__title {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  font-family: 'Space Grotesk', 'Avenir Next', 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  font-weight: 700;
+}
+
+[data-theme='dark'] .navbar__brand {
+  border-color: color-mix(in srgb, var(--ifm-color-primary) 38%, transparent);
+  background: color-mix(in srgb, var(--ifm-color-primary) 14%, transparent);
+}
+
+[data-theme='dark'] .navbar__brand:hover {
+  background: color-mix(in srgb, var(--ifm-color-primary) 22%, transparent);
+}
+
+@media screen and (max-width: 996px) {
+  .navbar__brand {
+    padding: 0.22rem 0.72rem 0.22rem 0.48rem;
+  }
+
+  .navbar__title {
+    font-size: 0.94rem;
+  }
+}
+
+.navbar-github-link {
+  padding: 0 !important;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+}
+
+.navbar-github-link:hover {
+  background: color-mix(in srgb, var(--ifm-color-primary) 14%, transparent);
+}
+
+.navbar-github-link::before {
+  content: '';
+  width: 1.25rem;
+  height: 1.25rem;
+  display: block;
+  background-color: var(--ifm-navbar-link-color);
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'%3E%3Cpath d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.49 7.49 0 0 1 8 3.8c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z'/%3E%3C/svg%3E");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+[data-theme='dark'] .navbar-github-link::before {
+  background-color: var(--ifm-navbar-link-color);
+}
+
+.theme-code-block {
+  border: 1px solid var(--playbook-code-border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--playbook-code-shadow);
+  margin: 1rem 0;
+  position: relative;
+}
+
+.theme-code-block pre {
+  margin: 0 !important;
+  background: var(--playbook-code-bg) !important;
+  padding: 1rem 1rem 1.1rem !important;
+}
+
+.theme-code-block [class*='codeBlockTitle'] {
+  background: var(--playbook-code-title-bg);
+  color: var(--playbook-code-title-text);
+  border-bottom: 1px solid var(--playbook-code-border);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  min-height: 2.25rem;
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 3rem 0.6rem 0.9rem;
+}
+
+.theme-code-block [class*='copyButtonIcons'] {
+  width: 1.2rem;
+  height: 1.2rem;
 }

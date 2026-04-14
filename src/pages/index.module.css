@@ -1,26 +1,23 @@
-.heroBanner {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  padding: 5rem 0 4rem;
-}
-
-.heroDescription {
-  margin: 0 auto;
-  max-width: 46rem;
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-top: 1.5rem;
-  flex-wrap: wrap;
-}
 
 .sectionGrid {
-  padding: 2.5rem 0 4rem;
+  padding: 3.25rem 0 4.4rem;
+}
+
+.sectionHeadingWrap {
+  margin-bottom: 1.3rem;
+}
+
+.sectionHeading {
+  margin: 0;
+  font-size: clamp(1.7rem, 2.4vw, 2.2rem);
+  font-family: 'Space Grotesk', 'Avenir Next', 'Segoe UI', sans-serif;
+}
+
+.sectionLead {
+  margin: 0.55rem 0 0;
+  max-width: 44rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.65;
 }
 
 .cardGrid {
@@ -31,37 +28,54 @@
 
 .card {
   border: 1px solid var(--ifm-color-emphasis-200);
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 1.2rem;
   text-decoration: none;
   color: inherit;
-  background: var(--ifm-background-color);
-  transition: border-color 0.15s ease, transform 0.15s ease;
+  background: var(--ifm-background-surface-color);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.07);
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
   border-color: var(--ifm-color-primary);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 24px rgba(15, 23, 42, 0.11);
   text-decoration: none;
 }
 
 .cardTitle {
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  margin: 0 0 0.45rem;
+  font-size: 1.15rem;
 }
 
 .cardDescription {
   margin: 0;
   color: var(--ifm-color-emphasis-700);
+  line-height: 1.55;
+  flex: 1;
 }
 
-[data-theme='dark'] .heroBanner {
-  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+.cardCta {
+  margin-top: 0.95rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  font-size: 0.92rem;
+}
+
+[data-theme='dark'] .card {
+  box-shadow: 0 1px 3px rgba(2, 6, 23, 0.45);
+}
+
+[data-theme='dark'] .card:hover {
+  box-shadow: 0 14px 24px rgba(2, 6, 23, 0.5);
 }
 
 @media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 3.5rem 0 3rem;
+  .sectionGrid {
+    padding-top: 2.4rem;
   }
 
   .cardGrid {
@@ -70,6 +84,18 @@
 }
 
 @media screen and (max-width: 640px) {
+  .sectionGrid {
+    padding: 1.95rem 0 3rem;
+  }
+
+  .sectionHeading {
+    font-size: 1.5rem;
+  }
+
+  .sectionLead {
+    font-size: 0.96rem;
+  }
+
   .cardGrid {
     grid-template-columns: 1fr;
   }
